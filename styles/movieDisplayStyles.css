@@ -1,12 +1,16 @@
 .movieDisplayWrapper {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .movieDisplay {
   display: flex;
   width: 270px;
   height: 160px;
+
+  margin: 15px;
   padding: 4px;
   border-radius: 8px;
 
