@@ -1,0 +1,15 @@
+.searchWrapper {
+  position: relative;
+  display: flex;
+  width: 400px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(55%);
+  /* background-color: red; */
+  padding: 5px 8px;
+  cursor: pointer;
+}

@@ -2,6 +2,8 @@ let genres = [];
 let moviesList = [];
 
 const setMoveData = async () => {
+  let search = document.getElementById('searchBar').value;
+
   // Get Genres
   const req = await fetch(
     'https://api.themoviedb.org/3/genre/movie/list?api_key=94501fa08c614734eea69931d25cb54a&language=en-US'
@@ -11,7 +13,7 @@ const setMoveData = async () => {
 
   // Get Movies
   const moviesReq = await fetch(
-    'https://api.themoviedb.org/3/search/movie?api_key=94501fa08c614734eea69931d25cb54a&language=en-US&query=avengers&page=1&include_adult=false'
+    `https://api.themoviedb.org/3/search/movie?api_key=94501fa08c614734eea69931d25cb54a&language=en-US&query=${search}&page=1&include_adult=false`
   );
   const moviesData = await moviesReq.json();
   moviesList = moviesData.results;
@@ -21,8 +23,10 @@ const setMoveData = async () => {
 };
 
 const setInfo = () => {
+  const displayElement = document.getElementById('display');
+  displayElement.innerHTML = '';
   moviesList.forEach((movie) => {
-    document.getElementById('thing').innerHTML += `
+    displayElement.innerHTML += `
     <div class="movieDisplay">
       <img draggable="false" class="moviePoster" src="https://image.tmdb.org/t/p/w92/${movie.poster_path}"></img>
 
@@ -63,5 +67,10 @@ const generateMovieRating = (rating) => {
 
   return html;
 };
-
-setMoveData();
+document.getElementById('searchIcon').addEventListener('click', setMoveData);
+document.getElementById('searchBar').addEventListener('keydown', (e) => {
+  if (e.key == 'Enter') {
+    setMoveData();
+  }
+});
+// setMoveData();
