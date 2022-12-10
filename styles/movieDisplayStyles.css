@@ -1,0 +1,39 @@
+.movieDisplayWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movieDisplay {
+  display: flex;
+  width: 270px;
+  height: 160px;
+  padding: 4px;
+  border-radius: 8px;
+
+  transition: background-color;
+  transition-duration: 0.2s;
+  background-color: rgba(240, 248, 255, 0);
+}
+.movieDisplay:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.moviePoster {
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.movieInfoWrapper {
+  margin: 3px 5px;
+}
+.movieTitle {
+  font-weight: bold;
+}
+.movieRatingWrapper {
+  margin: 10px 0;
+}
+.movieGenres {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
