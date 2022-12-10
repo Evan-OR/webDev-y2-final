@@ -33,7 +33,16 @@
 .movieRatingWrapper {
   margin: 10px 0;
 }
+.solidStar {
+  color: rgb(255, 187, 42);
+  fill: rgb(255, 187, 42);
+}
+.hollowStar {
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+}
+
 .movieGenres {
   font-size: 0.9rem;
-  opacity: 0.5;
+  opacity: 0.8;
 }
