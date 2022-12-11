@@ -1,7 +1,13 @@
+.modalHide {
+  pointer-events: none;
+  opacity: 0;
+}
+
 .modalWrapper {
   position: fixed;
   z-index: 10;
-  pointer-events: none;
+  user-select: none;
+  /* pointer-events: none; */
 
   display: flex;
   justify-content: center;
@@ -18,11 +24,13 @@
 }
 
 .modalMovieDisplay {
+  position: relative;
   transform: translateY(100px);
 
   display: flex;
-  width: 810px;
-  height: 480px;
+  width: 594px;
+  /* height: 352px; */
+  height: fit-content;
 
   margin: 15px;
   padding: 4px;
@@ -34,6 +42,23 @@
   color: black;
 }
 
+.closeBtn {
+  position: absolute;
+  right: 3px;
+  opacity: 0.5;
+  fill: black;
+  width: 20px;
+  cursor: pointer;
+}
+.closeBtn:hover {
+  opacity: 0.8;
+}
+
+.modalMovieDisplay img {
+  width: 229px;
+  height: 344px;
+}
+
 .modalMovieInfoWrapper {
   margin: 10px 14px;
 }
@@ -43,27 +68,43 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-
 .modalMovieDesc {
   opacity: 0.8;
+  margin-bottom: 15px;
 }
 
 .movieGenres {
   display: flex;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 .genreIcon {
   padding: 0 8px;
   border: solid 1px black;
   border-radius: 10px;
-  margin: 0 5px;
+  margin: 3px 5px;
   width: fit-content;
+  height: fit-content;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 
-.modalMovieRatingWrapper {
+.releaseDateWrapper {
   display: flex;
-  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  margin: 2px 5px;
+  font-size: 0.9rem;
+}
+.releaseDatetext {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.modalMovieRatingWrapper {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
 }
 
 .ratingIcon {
@@ -80,4 +121,10 @@
 
 .ratingVotes {
   font-size: 0.7rem;
+}
+
+.otherInfoWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
