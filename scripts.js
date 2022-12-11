@@ -4,6 +4,12 @@ let moviesList = [];
 const setMoveData = async () => {
   let search = document.getElementById('searchBar').value;
 
+  const movieereq = await fetch(
+    'https://api.themoviedb.org/3/movie/11324?api_key=94501fa08c614734eea69931d25cb54a&language=en-US'
+  );
+  const moviedata = await movieereq.json();
+  console.log(moviedata);
+
   // Get Genres
   const req = await fetch(
     'https://api.themoviedb.org/3/genre/movie/list?api_key=94501fa08c614734eea69931d25cb54a&language=en-US'
@@ -40,6 +46,10 @@ const setInfo = () => {
   });
 };
 
+const moneyFormat = (num) => {
+  return new Intl.NumberFormat('ie-IE', { style: 'currency', currency: 'EUR' }).format(num);
+};
+
 const getGenresAsString = (genreIDs) => {
   let genresAsString = [];
 
@@ -74,3 +84,4 @@ document.getElementById('searchBar').addEventListener('keydown', (e) => {
   }
 });
 // setMoveData();
+console.log(moneyFormat(1458000.56));

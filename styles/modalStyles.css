@@ -1,0 +1,83 @@
+.modalWrapper {
+  position: fixed;
+  z-index: 10;
+  pointer-events: none;
+
+  display: flex;
+  justify-content: center;
+
+  top: 50vh;
+  right: 50vw;
+  transform: translate(50%, -50%);
+
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: rgba(150, 150, 150, 0.363);
+}
+
+.modalMovieDisplay {
+  transform: translateY(100px);
+
+  display: flex;
+  width: 810px;
+  height: 480px;
+
+  margin: 15px;
+  padding: 4px;
+  border-radius: 8px;
+
+  transition: background-color;
+  transition-duration: 0.2s;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.modalMovieInfoWrapper {
+  margin: 10px 14px;
+}
+
+.modalMovieTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.modalMovieDesc {
+  opacity: 0.8;
+}
+
+.movieGenres {
+  display: flex;
+  margin-bottom: 20px;
+}
+.genreIcon {
+  padding: 0 8px;
+  border: solid 1px black;
+  border-radius: 10px;
+  margin: 0 5px;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.modalMovieRatingWrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
+.ratingIcon {
+  margin: 2px 5px;
+  fill: rgb(255, 187, 42);
+  width: 30px;
+}
+.ratingInfo {
+  margin: 2px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ratingVotes {
+  font-size: 0.7rem;
+}
