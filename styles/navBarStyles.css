@@ -1,0 +1,24 @@
+.navWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  max-width: 600px;
+}
+
+.logo {
+  font-size: 3rem;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  align-items: center;
+}
+.navIcon {
+  fill: white;
+  width: 70px;
+}

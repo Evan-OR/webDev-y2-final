@@ -10,63 +10,47 @@
     <link rel="stylesheet" href="styles/movieDisplayStyles.css" />
     <link rel="stylesheet" href="styles/searchBarStyles.css" />
     <link rel="stylesheet" href="styles/modalStyles.css" />
+    <link rel="stylesheet" href="styles/navBarStyles.css" />
     <!-- JAVASCRIPT -->
     <script defer src="/javascript/main.js"></script>
     <script defer src="/javascript/utils.js"></script>
 
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/ec849c1ba8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet" />
   </head>
 
   <body>
-    <div id="modal" class="modalWrapper modalHide">
-      <div id="infoInsert" class="modalMovieDisplay">
-        <img draggable="false" class="moviePoster" src="https://image.tmdb.org/t/p/w185/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg"></img>
-  
-        <div class="modalMovieInfoWrapper">
-          <div class="modalMovieTitle">Shutter Island</div>
-          <div class="movieGenres">
-            <div class="genreIcon">Thriller</div>
-            <div class="genreIcon">Mystery</div>
-          </div>
-
-          <div class="modalMovieRatingWrapper">
-            <svg class="ratingIcon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
-            </svg>
-            <div class="ratingInfo">
-              <div><b>8.1</b>/10</div>
-              <div class="ratingVotes">8,857 votes</div>
-            </div>
-          </div>
-
-          <div class="modalMovieDesc">
-            World War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance of a patient from a hospital for the criminally insane, but his efforts are compromised by troubling visions and a mysterious doctor.
-          </div>
-
-          <div class="otherInfoWrapper">
-            <div class="releaseDateWrapper">
-              <div><b>2010</b></div>
-              <div class="releaseDatetext">Released</div>
-            </div>
-            <div class="releaseDateWrapper">
-              <div><b>85 mil</b></div>
-              <div class="releaseDatetext">Budget</div>
-            </div>
-            <div class="releaseDateWrapper">
-              <div><b>280 mil</b></div>
-              <div class="releaseDatetext">Box Office</div>
-            </div>
-          </div>
-          
+    <nav class="navWrapper">
+      <div class="navContent">
+        <div class="logo">
+          <div>MovieSearch</div>
+          <svg
+            class="navIcon"
+            width="124"
+            height="124"
+            viewBox="0 0 124 124"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M94.5041 52.2438C94.5041 61.5659 91.4774 70.1771 86.3787 77.1636L112.096 102.896C114.635 105.434 114.635 109.557 112.096 112.096C109.556 114.635 105.433 114.635 102.894 112.096L77.1767 86.3638C70.1889 91.4818 61.576 94.4876 52.2521 94.4876C28.9119 94.4876 10 75.5795 10 52.2438C10 28.9082 28.9119 10 52.2521 10C75.5923 10 94.5041 28.9082 94.5041 52.2438ZM52.2521 81.4895C68.4013 81.4895 81.5035 68.3899 81.5035 52.2438C81.5035 36.0977 68.4013 22.9981 52.2521 22.9981C36.1028 22.9981 23.0006 36.0977 23.0006 52.2438C23.0006 68.3899 36.1028 81.4895 52.2521 81.4895Z"
+            />
+            <path
+              d="M30 42C30 39.2422 32.2422 37 35 37H55C57.7578 37 60 39.2422 60 42V62C60 64.7578 57.7578 67 55 67H35C32.2422 67 30 64.7578 30 62V42ZM73.6797 39.7969C74.4922 40.2344 75 41.0781 75 42V62C75 62.9219 74.4922 63.7656 73.6797 64.2031C72.8672 64.6406 71.8828 64.5938 71.1094 64.0781L63.6094 59.0781L62.5 58.3359V57V47V45.6641L63.6094 44.9219L71.1094 39.9219C71.875 39.4141 72.8594 39.3594 73.6797 39.7969V39.7969Z"
+            />
+          </svg>
         </div>
       </div>
+    </nav>
+    <div id="modal" class="modalWrapper modalHide">
+      <div id="infoInsert" class="modalMovieDisplay"></div>
     </div>
 
     <div id="mainContent" class="mainWrapper">
       <div class="searchWrapper">
-        <input id="searchBar" type="text" />
+        <input placeholder="Search" id="searchBar" type="text" />
         <div id="searchIcon" class="searchIcon">
           <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path

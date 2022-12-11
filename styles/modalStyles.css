@@ -38,20 +38,22 @@
 
   transition: background-color;
   transition-duration: 0.2s;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: rgb(54, 54, 54);
+  color: white;
+
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .closeBtn {
   position: absolute;
   right: 3px;
-  opacity: 0.5;
-  fill: black;
+  opacity: 0.8;
+  fill: white;
   width: 20px;
   cursor: pointer;
 }
 .closeBtn:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .modalMovieDisplay img {
@@ -80,7 +82,8 @@
 }
 .genreIcon {
   padding: 0 8px;
-  border: solid 1px black;
+  padding-bottom: 2px;
+  border: solid 1px white;
   border-radius: 10px;
   margin: 3px 5px;
   width: fit-content;

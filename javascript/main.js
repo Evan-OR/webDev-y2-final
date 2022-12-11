@@ -12,6 +12,9 @@ modal.addEventListener('click', (e) => {
 const setMoveData = async () => {
   let search = document.getElementById('searchBar').value;
 
+  //If search bar has no valid value then just return
+  if (search.replace(/\s/g, '') == '') return;
+
   // Get Genres
   const req = await fetch(
     'https://api.themoviedb.org/3/genre/movie/list?api_key=94501fa08c614734eea69931d25cb54a&language=en-US'
@@ -26,6 +29,11 @@ const setMoveData = async () => {
   const moviesData = await moviesReq.json();
   moviesList = moviesData.results;
   console.log(moviesList);
+
+  if (moviesList.length === 0) {
+    document.getElementById('display').innerHTML = '<div>Nothing Matches your search :(</div>';
+    return;
+  }
 
   createHTMLElements();
   addModalPopUp();
